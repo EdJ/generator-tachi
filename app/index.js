@@ -15,6 +15,15 @@ var TachiGenerator = module.exports = function TachiGenerator(args, options, con
         });
     });
 
+    this.hookFor('tachi:controller', {
+        args: "Default",
+        options: {
+            options: {
+                'skip-install': true
+            }
+        }
+    });
+
     this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
