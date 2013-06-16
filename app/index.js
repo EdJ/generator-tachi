@@ -29,15 +29,30 @@ var TachiGenerator = module.exports = function TachiGenerator(args, options, con
 
 util.inherits(TachiGenerator, yeoman.generators.NamedBase);
 
+TachiGenerator.prototype.askAboutBoostrap = function askAboutBoostrap() {
+    var callback = this.async();
+
+    this.prompt([{
+            type: 'confirm',
+            name: 'useBootstrapTemplate',
+            message: 'Would you like to add the Twitter Bootstrap demo template?',
+            default: false
+        }
+    ], function(props) {
+        this.useBootstrapTemplate = props.useBootstrapTemplate;
+
+        callback();
+    }.bind(this));
+};
+
 TachiGenerator.prototype.app = function app() {
     this.template('_package.json', 'package.json');
-    this.template('_bower.json', 'bower.json');
 };
 
 TachiGenerator.prototype.basic = function basic() {
-    if (!this.useBootstrapTemplate) {
-        this.directory('Basic', '.');
-    }
+    var directoryToCopy = this.useBootstrapTemplate ? 'Bootstrap' : 'Basic';
+    this.directory(directoryToCopy, '.');
+    this.mkdir('Content');
 };
 
 TachiGenerator.prototype.projectfiles = function projectfiles() {

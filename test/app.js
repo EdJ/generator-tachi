@@ -52,9 +52,7 @@ describe('Tachi generator', function() {
             });
 
             it('should write the current directory name as the application name into the package.json.', function(done) {
-                tachi.run({
-                    appname: 'tachi demo'
-                }, function() {
+                tachi.run({}, function() {
                     helpers.assertFile('package.json', new RegExp('"name": "' + rootDirectory + '"'));
                     done();
                 });
