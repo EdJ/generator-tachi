@@ -30,6 +30,9 @@ var TachiGenerator = module.exports = function TachiGenerator(args, options, con
 util.inherits(TachiGenerator, yeoman.generators.NamedBase);
 
 TachiGenerator.prototype.askAboutBoostrap = function askAboutBoostrap() {
+    // What a handsome devil.
+    console.log(this.yeoman);
+
     var callback = this.async();
 
     this.prompt([{
@@ -47,6 +50,7 @@ TachiGenerator.prototype.askAboutBoostrap = function askAboutBoostrap() {
 
 TachiGenerator.prototype.app = function app() {
     this.template('_package.json', 'package.json');
+    this.template('_Gruntfile.js', 'Gruntfile.js');
 };
 
 TachiGenerator.prototype.basic = function basic() {

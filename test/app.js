@@ -42,7 +42,8 @@ describe('Tachi generator', function() {
                         '.jshintrc',
                         '.editorconfig',
                         'index.js',
-                        'Controllers/DefaultController.js'
+                        'Controllers/DefaultController.js',
+                        'Gruntfile.js'
                 ];
 
                 tachi.run({}, function() {

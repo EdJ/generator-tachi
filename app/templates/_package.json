@@ -6,7 +6,10 @@
     },
     "devDependencies": {
         "mocha": "~1.10.0",
-        "should": "~1.2.2"
+        "should": "~1.2.2",
+        "grunt": "latest",
+        "grunt-contrib-watch": "latest",
+        "grunt-develop": "latest"
     },
     "scripts": {
         "test": "mocha"
