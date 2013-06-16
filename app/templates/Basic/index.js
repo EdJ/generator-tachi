@@ -4,7 +4,7 @@ var routeData = {
     routes: [{
             url: '/',
             data: {
-                controller: 'DefaultController',
+                controller: 'Default',
                 action: 'index'
             }
         }

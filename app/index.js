@@ -29,27 +29,6 @@ var TachiGenerator = module.exports = function TachiGenerator(args, options, con
 
 util.inherits(TachiGenerator, yeoman.generators.NamedBase);
 
-TachiGenerator.prototype.askFor = function askFor() {
-    var callback = this.async();
-
-    // have Yeoman greet the user.
-    console.log(this.yeoman);
-
-    var prompts = [{
-            type: 'confirm',
-            name: 'useBootstrapTemplate',
-            message: 'Would you like to use the Twitter Bootstrap demo project?',
-            default: false
-        }
-    ];
-
-    this.prompt(prompts, function(props) {
-        this.useBootstrapTemplate = props.useBootstrapTemplate;
-
-        callback();
-    }.bind(this));
-};
-
 TachiGenerator.prototype.app = function app() {
     this.template('_package.json', 'package.json');
     this.template('_bower.json', 'bower.json');

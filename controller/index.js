@@ -16,4 +16,5 @@ ControllerGenerator.prototype.files = function files() {
     });
 
     this.template('controllerTemplate.js', 'Controllers/' + controllerName + 'Controller.js');
+    this.template('controllerTestTemplate.js', 'test/Controllers/' + controllerName + 'Controller.js');
 };
