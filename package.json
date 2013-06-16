@@ -1,0 +1,38 @@
+{
+    "name": "generator-tachi",
+    "version": "0.0.1",
+    "description": "A Yeoman generator for Tachi",
+    "keywords": [
+            "yeoman-generator",
+            "tachi"
+    ],
+    "homepage": "https://github.com/EdJ/generator-tachi",
+    "bugs": "https://github.com/EdJ/generator-tachi/issues",
+    "author": {
+        "name": "Ed",
+        "email": "ed@ed-j.co.uk",
+        "url": "https://github.com/EdJ"
+    },
+    "main": "app/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/EdJ/generator-tachi.git"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "dependencies": {
+        "yeoman-generator": "~0.12.0"
+    },
+    "devDependencies": {
+        "mocha": "~1.10.0",
+        "should": ">= 1.2.2"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "licenses": [{
+            "type": "MIT"
+        }
+    ]
+}
